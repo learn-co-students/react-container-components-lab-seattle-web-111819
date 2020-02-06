@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const eachReview = ({
+const review = ({
   headline,
   byline,
   link,
@@ -19,7 +19,7 @@ const eachReview = ({
   )
 }
 
-const MovieReviews = ({reviews}) => <div className="review-list"> {reviews.map(eachReview)}</div>
+const MovieReviews = ({reviews}) => <div className="review-list">{reviews.map(review)}</div>
 MovieReviews.defaultProps={
   reviews: []
 }

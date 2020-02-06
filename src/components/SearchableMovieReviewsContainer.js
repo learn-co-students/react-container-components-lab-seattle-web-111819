@@ -20,7 +20,7 @@ class SearchableMovieReviewsContainer extends Component{
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch(URL.concat(this.state.searchTerm)).then(res => res.json()).then(data => this.setState({reviews: data}));
+    fetch(URL.concat(this.state.searchTerm)).then(res => res.json()).then(data => this.setState({reviews: data.results}));
   }
 
   handleSearchInputChange = event => 
